@@ -1,11 +1,16 @@
-# require 'water'
+require 'water'
 
-# describe Water do
+describe Water do
 
-#   let(:water) {Water.new}
+  let(:water) {Water.new}
+  let(:user) {double :user}
 
-#   it 'can receive a hit' do
-#   expect(water.miss).to be_missed
-#   end
+  it 'should not be hit when created' do
+  		expect(water).not_to be_hit
+  end
 
-# end
+  it 'water may be hit' do
+  		expect(water.hit!).to be true
+  end
+
+end

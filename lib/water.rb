@@ -1,7 +1,15 @@
-# class Water
+class Water
 
-# def miss
-#   @miss
-# end
+	def initialize
+		@hit = false
+	end
 
-# end
+	def hit?
+		@hit 
+	end
+
+	def hit!
+		 @hit = true
+	end
+
+end

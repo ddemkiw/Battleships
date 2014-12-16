@@ -9,7 +9,7 @@ describe Water do
   		expect(water).not_to be_hit
   end
 
-  it 'water may be hit' do
+  it 'should be able to be hit' do
   		expect(water.hit!).to be true
   end
 

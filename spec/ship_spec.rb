@@ -8,7 +8,7 @@ require 'ship'
 			expect(ship).to be_floating
 		end
 
-		it 'should be hit' do
+		it 'should be able to be hit' do
 			ship.hit!
 			expect(ship).to_not be_floating
 		end

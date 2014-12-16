@@ -2,11 +2,13 @@ require 'cell'
 
 describe Cell do 
 
-  let(:cell) {Cell.new}
+  
   let(:ship) {double :ship}
+  let(:water) {double :water}
+  let(:cell) { Cell.new(water) }
 
-  it 'should be empty when initialized' do
-    expect(cell.contents).to be_empty
+  it 'should be have water when initialized' do
+    expect(cell.contents).to include(water)
   end
 
   it 'should be able to anchor a ship' do

@@ -1,40 +1,38 @@
 require_relative 'water'
-
+require_relative 'ship'
 class Cell
 
-  attr_reader :contents
+  attr_accessor :contents
 
-	def initialize(default_contents)
- 		@contents = [default_contents]
+	def initialize(contents)
+ 		@contents = contents
 	end
 
-  def anchor(ship)
-    @contents.shift
-    @contents << ship
-  end  
-
-end
-
-class Cell
-  attr_accessor :content
-
-  def initialize(content)
-    @content = content
-  end
-
   def hit?
-    @content.hit?
-  end
+      @contents.hit?
+    end
 end
 
-class Water
-  def hit?
-    false
-  end
-end
+# class Cell
+#   attr_accessor :content
 
-class Ship
-  def hit?
-    true
-  end
-end
+#   def initialize(content)
+#     @content = content
+#   end
+
+#   def hit?
+#     @content.hit?
+#   end
+# end
+
+# class Water
+#   def hit?
+#     false
+#   end
+# end
+
+# class Ship
+#   def hit?
+#     true
+#   end
+# end

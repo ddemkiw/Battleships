@@ -1,5 +1,6 @@
 require 'cell'
 
+
 describe Cell do 
 
   
@@ -7,16 +8,12 @@ describe Cell do
   let(:water) {double :water}
   let(:cell) { Cell.new(water) }
 
-  it 'should be have water when initialized' do
+  it 'should have water when initialized' do
     expect(cell.contents).to include(water)
   end
 
-  it 'should be able to anchor a ship' do
-    cell.anchor(ship)
-    expect(cell.contents).to include(ship)
-  end
 
-  # it 'should know it\'s contents'
+  it 'should know when it\'' contents'
 
   # end 
 

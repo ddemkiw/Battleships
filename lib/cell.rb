@@ -1,15 +1,17 @@
 class Cell
 
+  attr_reader :contents
+
 	def initialize
- 		 @empty = true
+ 		 @contents = []
 	end 
 
-	def empty? 
- 		@empty
-	end
+  def status? 
+    @contents.inspect
+  end
 
-	def anchor(ship)
-		@empty = false
-	end
+  def anchor(ship)
+    @contents << ship
+  end  
 
 end

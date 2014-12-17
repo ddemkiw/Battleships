@@ -11,7 +11,7 @@ class Cell
 
  
 	def attack
-		raise 'You may not attack the same cell twice, please try again' if contents.hit? 
+		raise 'You may not attack the same cell twice, please try again' if @contents.hit? 
 		@contents.hit!
 	end
 

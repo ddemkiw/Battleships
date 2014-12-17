@@ -1,7 +1,11 @@
 class Water
   
+  def hit!
+    hit = true
+  end
+
   def hit?
-    false
+    @hit
 	end
 
 end

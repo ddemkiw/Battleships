@@ -8,12 +8,12 @@ describe Cell do
   let(:water) {double :water}
   let(:cell) { Cell.new(water) }
 
-  it 'should have water when initialized' do
+  it 'should have some content when initialized' do
     expect(cell.contents).to eq(water)
   end
 
 
-  it 'should know when it'  do
+  it 'should know when it '  do
 
   end 
 

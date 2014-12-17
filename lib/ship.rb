@@ -7,7 +7,6 @@ attr_accessor :hits, :size
     self.size = options.fetch(:size, size)
     @floating = true
     @hits = 0
-    @size = size
   end
 
   def self.battleship

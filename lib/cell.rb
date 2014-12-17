@@ -1,5 +1,6 @@
 require_relative 'water'
 require_relative 'ship'
+
 class Cell
 
   attr_accessor :contents
@@ -9,7 +10,9 @@ class Cell
 	end
 
   def hit?
-      @contents.hit?
+      if @contents = ship
+        @hit = true
+      end
     end
 end
 

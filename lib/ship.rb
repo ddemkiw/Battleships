@@ -1,8 +1,8 @@
 class Ship
   
   
-attr_accessor :size 
-attr_reader :hits
+attr_reader :size 
+attr_accessor :hits
 
   def initialize(options = {})
     self.size = options.fetch(:size, size)
@@ -22,35 +22,22 @@ attr_reader :hits
       new(:size => 2)
   end
 
-  def party_boat
+  def self.somalianpirateship
+      puts 'Arrr!'
       new(:size => 1)
   end
 
   def floating?
-      @floating
+      !sunk?
   end
 
-  # def hit!
-  #     @hits +=1
-  # end
-
-  
-  # def hit?
-  #     @hit
-  # end
-
-  def whatever?
-    if @hits > size
-      ship.sink!
-  end
-
-  def sink!
-   @floating = false
+  def sunk?
+   hits == size
   end
 
   def hit!
-    @hit = true
-    @hits +=1
+    self.hits += 1
+    true
   end
 
 end

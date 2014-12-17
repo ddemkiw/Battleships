@@ -16,8 +16,16 @@ require 'cell'
 		end
 
 		it 'should accept coordinates for ships' do
-			board.place_ship("E5")
-			expect(board.ships).to include "E5"
+			board.place_ship(:E5)
+			expect(board.ships).to include :E5
+		end
+
+		it 'should accept coordinates for attacks' do
+			board.attack_cell(:E6)
+			expect(board.attacks).to include :E6
+		end
+
+		it 'should know if the game is over' do 
 		end
 
 	end

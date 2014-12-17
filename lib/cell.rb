@@ -9,11 +9,16 @@ class Cell
  		@contents = contents
 	end
 
-  def hit?
-      if @contents = ship
-        @hit = true
-      end
+ 
+	def attack
+		raise 'You may not attack the same cell twice, please try again' if contents.hit? 
+		@contents.hit!
+	end
+
+  	def hit?
+      return @contents
     end
+
 end
 
 	

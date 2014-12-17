@@ -5,7 +5,6 @@ attr_accessor :hits, :size
 
   def initialize(options = {})
     self.size = options.fetch(:size, size)
-    @floating = true
     @hits = 0
   end
 
@@ -34,9 +33,13 @@ attr_accessor :hits, :size
    hits == size
   end
 
+  def hit?
+      @hit
+  end
+  
   def hit!
     self.hits += 1
-    true
+    @hit = true
   end
 
 end

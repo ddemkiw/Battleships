@@ -2,9 +2,13 @@ require 'ship'
 
 	describe Ship  do 
 
-		let(:ship) {Ship.new}
+		let(:ship) {Ship.new(:size => 1)}
 
-		it 'should should be floating when created'do
+		it 'it should allow setting size on initialization' do
+			expect(ship.size).to eq(1)
+		end
+		
+		it 'should should not be sunk when created'do
 			expect(ship).to be_floating
 		end
 

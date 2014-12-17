@@ -9,11 +9,11 @@ describe Cell do
   let(:cell) { Cell.new(water) }
 
   it 'should have water when initialized' do
-    expect(cell.contents).to include(water)
+    expect(cell.contents).to eq(water)
   end
 
 
-  it 'should know when it\'' contents'
+  # it 'should know when it\' contents'
 
   # end 
 

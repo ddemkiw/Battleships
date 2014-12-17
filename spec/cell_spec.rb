@@ -13,9 +13,12 @@ describe Cell do
   end
 
 
-  # it 'should know when it\' contents'
+  it 'should know when it'  do
 
-  # end 
+  end 
+
+  #cell will need to return a false hit for water or miss
+  # cell will need to return a hit true for a ship if hit count is zero before the hit
 
 
 end 

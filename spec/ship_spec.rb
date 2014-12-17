@@ -13,8 +13,12 @@ require 'ship'
 		end
 
 		it 'should be able to be hit' do
-			ship.hit!
-			expect(ship).to_not be_floating
+			expect(ship.hit!).to eq 1
+		end
+
+		it 'should keep track of it hits' do
+			2.times { ship.hit! }
+			expect(ship.hits).to eq 2
 		end
 
 	end

@@ -34,13 +34,19 @@ attr_reader :hits
   #     @hits +=1
   # end
 
-  # def sink
-  #   hit_count == ship.size
-  # end
-
+  
   # def hit?
   #     @hit
   # end
+
+  def whatever?
+    if @hits > size
+      ship.sink!
+  end
+
+  def sink!
+   @floating = false
+  end
 
   def hit!
     @hit = true

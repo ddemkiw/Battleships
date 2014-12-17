@@ -2,10 +2,10 @@ require 'ship'
 
 	describe Ship  do 
 
-		let(:ship) {Ship.new(:size => 1)}
+		let(:ship) {Ship.new(:size => 2)}
 
 		it 'it should allow setting size on initialization' do
-			expect(ship.size).to eq(1)
+			expect(ship.size).to eq(2)
 		end
 		
 		it 'should should not be sunk when created'do
@@ -20,5 +20,13 @@ require 'ship'
 			2.times { ship.hit! }
 			expect(ship.hits).to eq 2
 		end
+
+		it 'should to able to sink' do
+			2.times { ship.hit! }
+			expect(ship.sink!)
+
+		end
+
+
 
 	end

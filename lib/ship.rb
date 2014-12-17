@@ -1,13 +1,13 @@
 class Ship
   
-  
-attr_reader :size 
-attr_accessor :hits
+
+attr_accessor :hits, :size
 
   def initialize(options = {})
     self.size = options.fetch(:size, size)
     @floating = true
     @hits = 0
+    @size = size
   end
 
   def self.battleship

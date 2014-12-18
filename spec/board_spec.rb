@@ -31,4 +31,9 @@ require 'board'
 			expect(board).to be_hit
 		end
 
+		it 'should not allow the same coordinate to be attacked twice' do
+			board.attack(1)
+			expect({board.attack(1)}).to to raise_error('You may not attack the same cell twice, please try again') 
+		end
+
 	end

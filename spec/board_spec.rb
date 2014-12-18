@@ -1,5 +1,5 @@
 require 'board'
-require 'cell'
+
 
 
 	describe Board do 
@@ -16,14 +16,19 @@ require 'cell'
 		end
 
 		it 'should accept coordinates for ships' do
-			board.place_ship(:E5)
+			board.place_ship("E5")
 			expect(board.ships).to include :E5
 		end
 
 		it 'should accept coordinates for attacks' do
-			board.attack_cell(:E6)
-			expect(board.attacks).to include :E6
+			board.attack_cell("E5")
+			expect(board.attacks).to include :E5
 		end
+		
+		it 'should not be able to attack same coordinates twice' do
+      	    board.attack_cell("E5")
+      		expect(lambda{board.attack_cell("E5")}).to raise_error('You may not attack the same cell twice, please try again') 
+  		end
 
 		it 'should know if the game is over' do 
 		end

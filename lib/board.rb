@@ -1,9 +1,10 @@
-require_relative 'cell'
+require_relative 'ship'
+require_relative 'water'
 require 'set'
 
 	class Board
 
-		attr_accessor :ships, :attacks, :coordinates
+		attr_accessor :ships, :attacks, :coordinates, :contents
 
 		def initialize
 			@ships = Set.new
@@ -11,25 +12,23 @@ require 'set'
 			# coordinates = @coordinates
 		 end
 
-		 # def ships
-		 # 	ships = Set.new
-		 # end
-
-		 # def attacks
-		 # 	@attack = Set.new
-		 # end
-
-		 def place_ship(coordinates)
-		 	@ships <<(coordinates)
+		def place_ship(coordinates)
+			raise 'You may not attack the same cell twice, please try again' if ships.include?(coordinates.to_sym)
+			# @contents.hit!
+		 	@ships <<(coordinates.to_sym)
 		 end
 
-		 def attack_cell(coordinates)
-		 	@attacks <<(coordinates)
+		def attack_cell(coordinates)
+		 	raise 'You may not attack the same cell twice, please try again' if attacks.include?(coordinates.to_sym)
+			# @contents.hit!
+		 	@attacks <<(coordinates.to_sym)
 		 end
 
-		 def game_over?
-		 	@ships < @attacks 
-		 end
-	
+		def hit?
+    	 	return @contents
+   		 end
 
+		def game_over?
+		 	@ships >= @attacks
+		 end
 	end

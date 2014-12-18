@@ -21,7 +21,7 @@ require 'ship'
 		end
 
 		it 'a Somalian pirateship should have a size of 1' do
-			expect(Ship.somalianpirateship.size).to eq(1) 
+			expect(Ship.partyboat.size).to eq(1) 
 		end
 
 		it 'should should not be sunk when created'do

@@ -25,9 +25,10 @@ require 'board'
 		end
 
 		it 'should know when an attack\'s coordinates matches a ship' do
-			board.place_ship([:D3, :D4, :D5])
-			board.attack(:D4)
-			expect(board.hit?).to be_true
+			set = Set[1,2,3,4]
+			board.place_ship(set)
+			board.attack(4)
+			expect(board).to be_hit
 		end
 
 	end

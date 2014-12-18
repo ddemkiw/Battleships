@@ -7,7 +7,7 @@ attr_accessor :hits, :size, :coordinates
   def initialize(options = {})
     self.size = options.fetch(:size, size)
     @hits = 0
-    @coordinates = []
+    @coordinates = Set[]
   end
 
   def self.battleship

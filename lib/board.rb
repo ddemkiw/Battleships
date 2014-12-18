@@ -14,14 +14,11 @@ attr_accessor :attacks, :ships
 	end
 
 	def place_ship(ship)
-		ship.to_set
 		@ships << ship
+		@ships.flatten!
 	end
 
 	def hit?
-			if @attacks.intersection(@ships) == nil
-			end
+		@attacks.intersect?(@ships) 
 	end
-
-
 end

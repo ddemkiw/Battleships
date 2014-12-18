@@ -16,32 +16,28 @@ require 'ship'
 			expect(Ship.submarine.size).to eq(3)
 		end
 
-		it 'a battleship should have a size of 2' do
+		it 'a destroyer should have a size of 2' do
 			expect(Ship.destroyer.size).to eq(2)
 		end
 
-		it 'a Somalian pirateship should have a size of 1' do
+		it 'a partyboat should have a size of 1' do
 			expect(Ship.partyboat.size).to eq(1) 
 		end
 
-		it 'should should not be sunk when created'do
-			expect(ship).to be_floating
+		it 'should have an empty coordinates array on initialization' do
+			expect(ship.coordinates).to be_empty
 		end
 
 		it 'should be able to be hit' do
 			ship.hit!
-			expect(ship.hits).to eq 1
+			expect(ship.hits). to eq 1
 		end
 
-		it 'should keep track of it hits' do
-			2.times { ship.hit! }
-			expect(ship.hits).to eq 2
+		it 'when the hits equal the size the ship sinks' do
+			2.times{ship.hit!}
+			expect(ship.sunk?).to be_truthy
 		end
-
-		it 'can be sunk' do
-			2.times { ship.hit! }
-			expect(ship).to be_sunk
-		end
+		
 
 
 

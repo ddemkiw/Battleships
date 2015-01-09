@@ -35,7 +35,7 @@ Long story short, Marcus and I struggled with design decisions, which led us to 
 
 Pair programming on this project was particularily difficult. Marcus and I managed to keep it together and work more-or-less efficiently while the going was good, but our relationship all but broke down when the going got tough. Personally, I found it difficult to deal with the compounding levels of faillure and guilt that this kind of wreck can put upon a small team of relative strangers. I obviously felt guilty for letting myself down, but more importantly, I felt guilty for letting my partner down. 
 
-As the project got more off course, the more I felt personally responsible for guiding us back to shore. The harder I tried to fix the problems, both in our code and in our deteriorating working relationship, the more dust I kicked up and the harder it was for us to see the solutions. My number one takeaway from this pair programing experience is that sometimes you've got to take a step back and let the code burn. Try your best not to let your self-worth and your working relationships burn with it. 
+As the project got more off course, I felt personally responsible for guiding us back to shore. The harder I tried to fix the problems, both in our code and in our deteriorating working relationship, the more dust I kicked up and the harder it was for us to see the solutions. My number one takeaway from this pair programing experience is that sometimes you've got to take a step back and let the code burn. Try your best not to let your self-worth and your working relationships burn with it. 
 
 
 Note: All Battleship puns intended. 

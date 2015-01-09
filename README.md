@@ -3,7 +3,7 @@ Title
 
 ## Synopsis
 
-Battleship is a guessing game for two players. Each player sets a fleet of ships of varying sizes on a 10 X 10 grid. Players take turn shooting (guessing) at each others boards. When a player sinks all the ships in their opponents fleet, THEY WIN!
+Battleship is a guessing game for two players. Each player sets a fleet of ships of varying sizes on a 10 X 10 grid. Players take turns shooting (guessing) at each others boards. When a player sinks all the ships in their opponents fleet, THEY WIN!
 
 ## Technologies Used
 

@@ -25,8 +25,7 @@ This week I worked with the ever patient Marcus de Wilde. Although we made great
 - add Player class
 - add Cell class
 - add Game class
-- get board working as "boardless" board
-- 
+- get board working as boardless board
 
 ## Reflections
 
